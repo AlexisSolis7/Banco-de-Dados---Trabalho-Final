@@ -2,7 +2,7 @@
 
 ## Status: PROJETO ORGANIZADO E REFATORADO - VERSÃO FINAL
 
-Este é o **Sistema de Consulta de Pluviometria Escolar** em sua versão completamente organizada e profissional.
+Este é o **Sistema de Consulta de Pluviometria Escolar**
 
 ## Estrutura do Projeto ORGANIZADA
 
@@ -60,22 +60,16 @@ python menu_principal.py
 
 ## Melhorias Implementadas
 
-### 1. **Código Limpo**
-- Sem emojis
+### **Código Limpo**
 - Funções especializadas
 - Separação clara de responsabilidades
 
-### 2. **Interface Profissional**
-- Menu intuitivo
-- Mensagens claras
-- Validação de entrada
-
-### 3. **Gráficos Inteligentes**
+### **Gráficos Inteligentes**
 - Apenas em consultas de análise
 - Detecta automaticamente o tipo de dados
 - Salva resultados em CSV
 
-### 4. **Projeto Minimalista**
+### **Projeto Minimalista**
 - Apenas arquivos essenciais
 - Estrutura organizada
 - Fácil manutenção
@@ -126,12 +120,6 @@ Execute `python validar_sistema.py` para verificar se todos os componentes estã
 - Ambiente virtual ativo
 - Todas as dependências instaladas
 
-## CORREÇÃO IMPORTANTE - Dezembro 2024
-
-### Problema dos Gráficos RESOLVIDO
-**ANTES**: A inserção de dados (Opção 2) gerava gráficos desnecessariamente
-**AGORA**: Inserção de dados é LIMPA - sem gráficos, apenas confirmação de sucesso
-
 ### Mudanças Implementadas:
 - Criada função `executar_insercao()` específica para operações de inserção
 - Todas as inserções de dados agora usam esta função especializada
@@ -145,36 +133,15 @@ Execute `python validar_sistema.py` para verificar se todos os componentes estã
 4. Confirme que NÃO há geração de gráficos
 5. Use Opções 3-9 para ver gráficos (quando apropriado)
 
-## CORREÇÃO ADICIONAL - Gráficos em Listagens
-
-### Problema identificado:
-- Ao inserir ALUNO (Opção 2C), a listagem de escolas disponíveis gerava gráficos
-- Ao inserir COLETA (Opção 2D), a listagem de alunos disponíveis gerava gráficos  
-- Função "Verificar dados" (Opção 10) gerava gráficos desnecessários
-- Função "Listar tabelas" (Opção 9) gerava gráficos desnecessários
-
-### Solução implementada:
-- Nova função `listar_dados()` - Lista dados SEM gerar gráficos
-- Corrigidas as funções que fazem listagens simples para não gerar gráficos
-- Separação clara entre "consultar para análise" vs "listar para seleção"
-
-### Funções que agora usam `listar_dados()`:
-- Listagem de escolas (durante inserção de aluno)
-- Listagem de alunos (durante inserção de coleta)
-- Verificação de dados das tabelas (contagem)
-- Listagem de tabelas do banco
-
-### Resultado:
-**APENAS consultas de análise (Opções 3-8) geram gráficos**
 
 ## NOVA FUNCIONALIDADE: ANÁLISE COM IA
 
-### ✨ **Integração com Google Gemini AI**
+###  **Integração com Google Gemini AI**
 - **Opção 9**: Análise de Observação com IA
 - **Transformação**: Dados qualitativos → Dados estruturados
 - **Modelo**: Gemini-1.5-flash (Google)
 
-### 🧠 **Como Funciona**:
+###  **Como Funciona**:
 1. **Input**: Texto livre do aluno (observações meteorológicas)
 2. **Processamento**: IA analisa semanticamente o conteúdo
 3. **Output**: JSON estruturado com insights organizados
